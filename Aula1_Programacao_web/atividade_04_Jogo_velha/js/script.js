@@ -58,9 +58,8 @@ $(function() {
     //funcao de clique
     $(function(){  
         $("#botao").click(function(){
-            //alert("botão foi clicado.")
+            alert("botão foi clicado.")
             //$("ajax").load("LOAD.txt");
-            $(function(){ $( "#ajax" ).load( "LOAD.txt" ); }); 
         });
     });
 
