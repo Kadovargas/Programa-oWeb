@@ -42,3 +42,27 @@ $(function(){
         $("#endereco").val($linha.children(".endereco").text());
     })
 })
+
+//aula de hoje
+
+$('form').on('submit', function(e){
+    e.preventDefault();
+    const dados = {};
+    
+    $('form').find('input').each(function(i, el){
+        dados[el.id] = el.value;
+    })
+    
+    $.ajax('https://jsonplaceholder.typicode.com/users', {
+        type: 'POST',
+        data: dados,
+        success: function(_dados){
+            console.log(_dados)
+            mostraDados([_dados])
+            alert('Sucesso !!!')
+        },
+        error: function(){
+            alert('Erro!!!')
+        }
+    })  
+})
