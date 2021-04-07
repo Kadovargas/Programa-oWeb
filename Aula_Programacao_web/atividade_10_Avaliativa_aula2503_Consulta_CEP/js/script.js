@@ -26,3 +26,5 @@ cep.addEventListener("blur",(e)=>{  //O blur serve para quando a pessoa tira o f
     })
     .catch(e => console.log('Deu Erro: '+ e,message))//caso dê errado trata a excessão, captura o erro e mostra no log do console   
 })
+
+
